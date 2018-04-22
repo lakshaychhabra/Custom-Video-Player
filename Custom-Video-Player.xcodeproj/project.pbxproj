@@ -12,6 +12,13 @@
 		3AB29ABD208C83B0001FDBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB29ABB208C83B0001FDBD6 /* Main.storyboard */; };
 		3AB29ABF208C83B0001FDBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB29ABE208C83B0001FDBD6 /* Assets.xcassets */; };
 		3AB29AC2208C83B0001FDBD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB29AC0208C83B0001FDBD6 /* LaunchScreen.storyboard */; };
+		3AB29ACD208C8843001FDBD6 /* vid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3AB29ACC208C8843001FDBD6 /* vid.mp4 */; };
+		3AB29ACF208C8A4F001FDBD6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB29ACE208C8A4E001FDBD6 /* 2.png */; };
+		3AB29AD1208C8A63001FDBD6 /* vol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB29AD0208C8A62001FDBD6 /* vol.png */; };
+		3AD93E93208C94330052BFB6 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3AD93E92208C94330052BFB6 /* music.mp3 */; };
+		3AD93E96208C9A710052BFB6 /* Playy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD93E95208C9A710052BFB6 /* Playy.png */; };
+		3AD93E98208C9A7A0052BFB6 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD93E97208C9A7A0052BFB6 /* stop.png */; };
+		3AD93E9A208CCA760052BFB6 /* vid2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3AD93E99208CCA750052BFB6 /* vid2.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		3AB29ABE208C83B0001FDBD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB29AC1208C83B0001FDBD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB29AC3208C83B0001FDBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB29ACC208C8843001FDBD6 /* vid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vid.mp4; sourceTree = "<group>"; };
+		3AB29ACE208C8A4E001FDBD6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		3AB29AD0208C8A62001FDBD6 /* vol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vol.png; sourceTree = "<group>"; };
+		3AD93E92208C94330052BFB6 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		3AD93E95208C9A710052BFB6 /* Playy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Playy.png; sourceTree = "<group>"; };
+		3AD93E97208C9A7A0052BFB6 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		3AD93E99208CCA750052BFB6 /* vid2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vid2.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,9 @@
 		3AB29AAB208C83B0001FDBD6 = {
 			isa = PBXGroup;
 			children = (
+				3AD93E99208CCA750052BFB6 /* vid2.mp4 */,
+				3AD93E92208C94330052BFB6 /* music.mp3 */,
+				3AB29ACC208C8843001FDBD6 /* vid.mp4 */,
 				3AB29AB6208C83B0001FDBD6 /* Custom-Video-Player */,
 				3AB29AB5208C83B0001FDBD6 /* Products */,
 			);
@@ -60,8 +77,20 @@
 				3AB29ABE208C83B0001FDBD6 /* Assets.xcassets */,
 				3AB29AC0208C83B0001FDBD6 /* LaunchScreen.storyboard */,
 				3AB29AC3208C83B0001FDBD6 /* Info.plist */,
+				3AB29AD2208C8A71001FDBD6 /* Image Files */,
 			);
 			path = "Custom-Video-Player";
+			sourceTree = "<group>";
+		};
+		3AB29AD2208C8A71001FDBD6 /* Image Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AB29AD0208C8A62001FDBD6 /* vol.png */,
+				3AB29ACE208C8A4E001FDBD6 /* 2.png */,
+				3AD93E95208C9A710052BFB6 /* Playy.png */,
+				3AD93E97208C9A7A0052BFB6 /* stop.png */,
+			);
+			path = "Image Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +153,14 @@
 			files = (
 				3AB29AC2208C83B0001FDBD6 /* LaunchScreen.storyboard in Resources */,
 				3AB29ABF208C83B0001FDBD6 /* Assets.xcassets in Resources */,
+				3AD93E98208C9A7A0052BFB6 /* stop.png in Resources */,
+				3AB29ACF208C8A4F001FDBD6 /* 2.png in Resources */,
+				3AD93E96208C9A710052BFB6 /* Playy.png in Resources */,
+				3AB29AD1208C8A63001FDBD6 /* vol.png in Resources */,
 				3AB29ABD208C83B0001FDBD6 /* Main.storyboard in Resources */,
+				3AD93E93208C94330052BFB6 /* music.mp3 in Resources */,
+				3AB29ACD208C8843001FDBD6 /* vid.mp4 in Resources */,
+				3AD93E9A208CCA760052BFB6 /* vid2.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,6 +50,13 @@
                                             <action selector="volumeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fA5-5L-ucw"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onE-dN-iGl">
+                                        <rect key="frame" x="27" y="147" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1TA-D8-vsm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -135,33 +142,19 @@
                     </view>
                     <connections>
                         <outlet property="backwardLabel" destination="AvF-XB-cs5" id="ShL-KG-QR5"/>
+                        <outlet property="buttonLabel" destination="onE-dN-iGl" id="hph-17-sqz"/>
                         <outlet property="forwardLabel" destination="WzR-Kv-kZW" id="LEf-td-AhW"/>
                         <outlet property="playButtonLabel" destination="EFd-Ki-qAT" id="LJu-Gj-XvO"/>
                         <outlet property="stopButtonLabel" destination="WXA-YT-iaK" id="biM-JO-VTx"/>
                         <outlet property="videoVie" destination="jbO-Jd-ELL" id="26g-Gs-mXl"/>
                         <outlet property="volumeLabel" destination="44X-EM-XQn" id="QTh-MR-SXu"/>
-                        <segue destination="aeE-2w-rfU" kind="show" identifier="toScreen2" id="c8d-3Q-WcJ"/>
                         <segue destination="Xkc-PR-cfv" kind="show" identifier="toScreen5" id="2cX-UA-yvm"/>
+                        <segue destination="kcZ-gF-Crl" kind="show" identifier="toScreen2" id="s0K-ZX-TEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.95652173913044" y="133.33333333333334"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2jW-eg-qps">
-            <objects>
-                <viewController id="aeE-2w-rfU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lnw-hk-f1y">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="dfy-2e-Bft"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pKv-OE-MbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="900" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="M1x-I2-9Bx">
@@ -208,10 +201,157 @@
             </objects>
             <point key="canvasLocation" x="1220" y="-1148"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="9WK-eQ-cGb">
+            <objects>
+                <viewController id="kcZ-gF-Crl" customClass="SecondViewController" customModule="Custom_Video_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ttN-la-Amb">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cou-ha-A1x">
+                                <rect key="frame" x="643" y="32" width="94" height="313"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qS-0L-CoP">
+                                        <rect key="frame" x="8" y="212" width="85" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3qS-0L-CoP" secondAttribute="height" multiplier="85:98" id="Njy-b9-bPl"/>
+                                            <constraint firstAttribute="width" constant="85" id="Ygj-kI-jaC"/>
+                                            <constraint firstAttribute="height" constant="98" id="tA5-4w-p1q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="5"/>
+                                        <state key="normal" title="Mute" image="vol.png"/>
+                                        <connections>
+                                            <action selector="volumeButton:" destination="kcZ-gF-Crl" eventType="touchUpInside" id="Cwl-mM-fuf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFS-Fc-2EA">
+                                        <rect key="frame" x="10" y="-1" width="42" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Time"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDe-9w-UR9">
+                                        <rect key="frame" x="0.0" y="42" width="93" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0y-UM-foT">
+                                        <rect key="frame" x="10" y="141" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGF-47-p5k"/>
+                                            <action selector="button:" destination="kcZ-gF-Crl" eventType="touchUpInside" id="bAV-GO-mqJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3qS-0L-CoP" secondAttribute="bottom" constant="3" id="Fjd-hP-P3A"/>
+                                    <constraint firstItem="3qS-0L-CoP" firstAttribute="leading" secondItem="cou-ha-A1x" secondAttribute="leadingMargin" id="l9L-at-bUr"/>
+                                </constraints>
+                            </view>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="wHD-Jy-wzb">
+                                <rect key="frame" x="0.0" y="0.0" width="635" height="345"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-Ck-xpQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="646" height="353"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="screenButton:" destination="kcZ-gF-Crl" eventType="touchUpInside" id="vit-U1-2qi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8F-ka-Bbv">
+                                <rect key="frame" x="0.0" y="353" width="736" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yta-Qd-7Ao">
+                                        <rect key="frame" x="443" y="8" width="30" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="forwardButtonPressed:" destination="kcZ-gF-Crl" eventType="touchUpInside" id="18d-MN-Y95"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efP-Iw-CWU">
+                                        <rect key="frame" x="279" y="7" width="45" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="Playy.png"/>
+                                        <connections>
+                                            <action selector="playButtonPressed:" destination="kcZ-gF-Crl" eventType="touchUpInside" id="QYt-iV-WD6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ix-9o-XJB">
+                                        <rect key="frame" x="358" y="7" width="45" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="stop.png"/>
+                                        <connections>
+                                            <action selector="stopButtonPressed:" destination="kcZ-gF-Crl" eventType="touchUpInside" id="6gk-6y-Jmo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4P-BP-eAZ">
+                                        <rect key="frame" x="198" y="12" width="30" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="backwardButtonPressed:" destination="kcZ-gF-Crl" eventType="touchUpInside" id="Hb7-xz-90j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wHD-Jy-wzb" firstAttribute="leading" secondItem="ttN-la-Amb" secondAttribute="leading" id="0r4-IO-pju"/>
+                            <constraint firstItem="z8F-ka-Bbv" firstAttribute="top" secondItem="wHD-Jy-wzb" secondAttribute="bottom" constant="8" symbolic="YES" id="5S8-E1-0LM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cou-ha-A1x" secondAttribute="trailing" constant="-21" id="9Yo-yQ-TKd"/>
+                            <constraint firstItem="wHD-Jy-wzb" firstAttribute="leading" secondItem="z8F-ka-Bbv" secondAttribute="leading" id="D9i-iq-Yer"/>
+                            <constraint firstAttribute="trailing" secondItem="wHD-Jy-wzb" secondAttribute="trailing" constant="101" id="HFx-DN-NKh"/>
+                            <constraint firstAttribute="trailing" secondItem="z8F-ka-Bbv" secondAttribute="trailing" id="JYY-jz-Fww"/>
+                            <constraint firstItem="cou-ha-A1x" firstAttribute="leading" secondItem="wHD-Jy-wzb" secondAttribute="trailing" constant="8" symbolic="YES" id="NkN-OA-pfn"/>
+                            <constraint firstItem="z8F-ka-Bbv" firstAttribute="top" secondItem="cou-ha-A1x" secondAttribute="bottom" constant="8" id="UWe-J4-ecE"/>
+                            <constraint firstItem="wHD-Jy-wzb" firstAttribute="bottom" secondItem="cou-ha-A1x" secondAttribute="bottom" id="Vm6-za-D16"/>
+                            <constraint firstItem="z8F-ka-Bbv" firstAttribute="top" secondItem="cou-ha-A1x" secondAttribute="bottom" constant="8" symbolic="YES" id="XkA-Kr-yxP"/>
+                            <constraint firstItem="wHD-Jy-wzb" firstAttribute="top" secondItem="ZIp-v7-Y96" secondAttribute="top" id="Zgy-UM-Kcu"/>
+                            <constraint firstAttribute="bottom" secondItem="wHD-Jy-wzb" secondAttribute="bottom" constant="69" id="hLx-I9-uNI"/>
+                            <constraint firstItem="z8F-ka-Bbv" firstAttribute="bottom" secondItem="ZIp-v7-Y96" secondAttribute="bottom" id="sGX-dO-4UV"/>
+                            <constraint firstItem="cou-ha-A1x" firstAttribute="top" secondItem="ZIp-v7-Y96" secondAttribute="top" constant="32" id="zzg-WY-LNv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZIp-v7-Y96"/>
+                    </view>
+                    <connections>
+                        <outlet property="backwardLabel" destination="f4P-BP-eAZ" id="jPF-bM-05p"/>
+                        <outlet property="buttonLabel" destination="J0y-UM-foT" id="KsC-qE-wCy"/>
+                        <outlet property="forwardLabel" destination="yta-Qd-7Ao" id="ozS-bg-WdO"/>
+                        <outlet property="playButtonLabel" destination="efP-Iw-CWU" id="kyw-sZ-1Jf"/>
+                        <outlet property="repCounterLabel" destination="gDe-9w-UR9" id="4IY-9J-Kf2"/>
+                        <outlet property="stopButtonLabel" destination="3ix-9o-XJB" id="Mrr-ag-Sfx"/>
+                        <outlet property="videoVie" destination="wHD-Jy-wzb" id="mLw-f0-7ad"/>
+                        <outlet property="volumeLabel" destination="3qS-0L-CoP" id="uBa-Yt-cvC"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toScreen1" id="3Px-bE-Lkp"/>
+                        <segue destination="Xkc-PR-cfv" kind="show" identifier="toScreen5From2" id="uqZ-lQ-rDA"/>
+                        <segue destination="8Of-uA-rU0" kind="show" identifier="toScreen3" id="e9m-CE-bXC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymS-pg-daT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865.76086956521749" y="131.8840579710145"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Playy.png" width="262" height="262"/>
         <image name="stop.png" width="512" height="512"/>
         <image name="vol.png" width="560" height="560"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uqZ-lQ-rDA"/>
+    </inferredMetricsTieBreakers>
 </document>

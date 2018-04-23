@@ -14,4 +14,11 @@ class FourthViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func skipRestButton(_ sender: Any) {
+        performSegue(withIdentifier: "toScreen1from4", sender: self)
+    }
+    @IBAction func StopExerciseButton(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toScreen5From4", sender: self)
+    }
 }

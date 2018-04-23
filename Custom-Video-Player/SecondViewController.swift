@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 
 class SecondViewController: UIViewController {
-
+    
+    var seconds = 0
     @IBOutlet var backwardLabel: UIButton!
     @IBOutlet var stopButtonLabel: UIButton!
     @IBOutlet var playButtonLabel: UIButton!
@@ -18,7 +19,7 @@ class SecondViewController: UIViewController {
     @IBOutlet var volumeLabel: UIButton!
     @IBOutlet var videoVie: UIView!
     @IBOutlet var buttonLabel: UIButton!
-    
+    var timer = Timer()
     @IBOutlet var repCounterLabel: UILabel!
     let path2 = Bundle.main.path(forResource: "vid2", ofType: "mp4")
     var player : AVPlayer!
@@ -31,10 +32,15 @@ class SecondViewController: UIViewController {
         playerLayer = AVPlayerLayer(player: player)
         videoVie.layer.addSublayer(playerLayer)
         button(self)
-
+        runTimer()
 
         
     }
+    // Running Timer
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ThirdViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         player.play()
@@ -45,16 +51,16 @@ class SecondViewController: UIViewController {
     }
     //Control The volume i.e Mute and UnMute
     @IBAction func volumeButton(_ sender: Any) {
-        if(isvolumeplay){
+        if(ViewController.isvolumeplay){
             volumeLabel.setImage(UIImage(named: "2.png"), for: UIControlState.normal)
             player?.volume = 0
             
-            isvolumeplay = false
+           ViewController.isvolumeplay = false
         }
         else{
             volumeLabel.setImage(UIImage(named: "vol.png"), for: UIControlState.normal)
             player?.volume = 1
-            isvolumeplay = true
+            ViewController.isvolumeplay = true
          
         }
         
@@ -130,5 +136,14 @@ class SecondViewController: UIViewController {
         
     }
   
+    @objc func updateTimer(){
+        seconds += 1
+        repCounterLabel.text = "\(seconds)/9"
+        if seconds == 9 {
+            timer.invalidate()
+            performSegue(withIdentifier: "toScreen3", sender: self)
+            
+        }
+    }
 
 }

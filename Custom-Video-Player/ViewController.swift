@@ -9,11 +9,11 @@
 import UIKit
 import AVFoundation
 
-var isvolumeplay  = true
 
 class ViewController: UIViewController {
 
     @IBOutlet var videoVie: UIView!
+    static var isvolumeplay : Bool = true
     var player : AVPlayer!
     var playerLayer : AVPlayerLayer!
     var musicPlayer = AVAudioPlayer()
@@ -77,16 +77,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func volumeButton(_ sender: Any) {
-        if(isvolumeplay){
+        if(ViewController.isvolumeplay){
         volumeLabel.setImage(UIImage(named: "2.png"), for: UIControlState.normal)
             player?.volume = 0
             stop()
-            isvolumeplay = false
+            ViewController.isvolumeplay = false
         }
         else{
             volumeLabel.setImage(UIImage(named: "vol.png"), for: UIControlState.normal)
             player?.volume = 1
-            isvolumeplay = true
+            ViewController.isvolumeplay = true
             musicPlayer.play()
         }
         

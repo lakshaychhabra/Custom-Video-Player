@@ -2,6 +2,7 @@
 This is a Custom Video Player Which shows different body building exercise with some added features of skip, pause, play, next, etc. This is the task given by IOSD.tech
 
 # Gif of Task
+<img src="https://media.giphy.com/media/8FV8RCmvKKkDrA1ycB/giphy.gif" width="250" height="500" />
 
 ## Task Details
 

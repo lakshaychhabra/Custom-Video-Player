@@ -4,7 +4,8 @@ This is a Custom Video Player Which shows different body building exercise with 
 ## Task Details
 
 The Task detail was as follows 
-(https://github.com/lakshaychhabra/Custom-Video-Player/blob/master/TaskDetails/1.png])
+![Alt text](https://github.com/lakshaychhabra/Custom-Video-Player/blob/master/TaskDetails/1.png "Optional Title")
+
 [[https://github.com/lakshaychhabra/Custom-Video-Player/blob/master/TaskDetails/2.png]]
 [[https://github.com/lakshaychhabra/Custom-Video-Player/blob/master/TaskDetails/3.png]]
 [[https://github.com/lakshaychhabra/Custom-Video-Player/blob/master/TaskDetails/4.png]]
